@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med Nova</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header>
+        <div class="navigation">
+            <a href="#home" aria-label="Med Nova home"><img class="logo" src="images/logo.png" alt="Med Nova"></a>
+            <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#supplies">Supplies</a><a href="#contact">Contact</a></nav>
+        </div>
+    </header>
+    <main id="main-content">
+        <section id="home" class="section hero">
+            <div class="hero-text reveal"><p><strong>Better Health. Brighter Tomorrow.</strong></p><h1>Your trusted <span>healthcare</span> partner.</h1><p>Quality care and reliable medical products for healthcare professionals, institutions and communities.</p><a class="button" href="#supplies">View supplies</a><a class="button secondary" href="#contact">Contact us</a></div>
+            <div class="hero-image reveal"><img src="images/steth.png" alt="Stethoscope representing medical care"></div>
+        </section>
+        <section id="supplies" class="section supplies">
+            <div class="heading reveal"><h2>Supplies</h2><p>Medical products and equipment for your healthcare needs.</p></div>
+            <div class="supply-list">
+                <article class="supply reveal"><div class="supply-icon"><img src="images/supply1.png" alt="Medical supplies"></div><h3>Medical supplies and equipment</h3><p>Supplies and equipment for healthcare professionals and institutions.</p></article>
+                <article class="supply reveal"><div class="supply-icon"><img src="images/supply2.jpg" alt="Dental supplies"></div><h3>Dental supplies and equipment</h3><p>High-quality supplies and equipment for dental practices.</p></article>
+                <article class="supply reveal"><div class="supply-icon"><img src="images/supply3.png" alt="Healthcare solutions"></div><h3>Healthcare solutions</h3><p>Comprehensive healthcare solutions for your facility.</p></article>
+                <article class="supply reveal"><div class="supply-icon"><img src="images/supply4.png" alt="Pharmaceuticals"></div><h3>Pharmaceuticals</h3><p>Quality pharmaceutical products for your patients.</p></article>
+                <article class="supply reveal"><div class="supply-icon"><img src="images/supply5.png" alt="Hospital equipment"></div><h3>Hospital equipment</h3><p>Reliable equipment for hospitals and healthcare facilities.</p></article>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <div class="section contact"><div class="contact-intro reveal"><p><strong>Get in touch</strong></p><h2>Contact us</h2><p>Speak with our manager about the right supplies and solutions for your needs.</p></div><address class="contact-card reveal"><h2>Dr. Elul Tadesse</h2><p class="manager">Manager</p><div class="contact-item"><strong>Phone</strong><a href="tel:+251913711498">+251 913 711 498</a></div><div class="contact-item"><strong>Email</strong><a href="mailto:mednovamedicals@gmail.com">mednovamedicals@gmail.com</a></div><div class="contact-item"><strong>Address</strong><a href="https://maps.google.com/?q=Addis+Ababa,+Ethiopia" target="_blank" rel="noopener">Addis Ababa, Ethiopia</a></div></address></div>
+        </section>
+    </main>
+    <footer>Med Nova | A subsidiary of Junaid Group of Companies, UAE.</footer>
+    <script>
+        const items = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('show'); observer.unobserve(entry.target); } }), { threshold: 0.15 });
+            items.forEach(item => observer.observe(item));
+        } else { items.forEach(item => item.classList.add('show')); }
+    </script>
+</body>
+</html>
