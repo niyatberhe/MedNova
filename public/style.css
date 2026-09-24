@@ -35,7 +35,7 @@ nav a:hover, nav a:focus { color: #db252d; text-decoration: underline; }
 .contact-intro h2 { margin: 10px 0; }
 .contact-card { padding: 35px; background: white; border-left: 6px solid #db252d; }
 .contact-card h2 { margin: 0; color: #073b71; font-size: 34px; }
-.manager { margin-top: 0; color: #db252d; font-weight: bold; }
+.manager { margin-top: 0; color: #073b71; font-weight: bold; }
 .contact-item { margin: 20px 0; }
 .contact-item strong { display: block; color: #073b71; }
 .contact-item a { color: #073b71; text-decoration: none; }
